@@ -2,9 +2,9 @@ package greeting
 
 import "testing"
 
-func TestHelloWorld(t *testing.T) {
+func TestGreeting(t *testing.T) {
 	expected := "Hello, World!"
-  observed := greeting()
+  observed := Greeting()
 	if observed != expected {
 		t.Fatalf("HelloWorld() = %v, want %v", observed, expected)
 	}
