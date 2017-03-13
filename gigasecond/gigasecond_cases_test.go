@@ -1,6 +1,6 @@
 package gigasecond
 
-var addGigascecondCases = []struct {
+var addGigaSecondCase = []struct {
 	date         string
 	expectedDate string
 }{

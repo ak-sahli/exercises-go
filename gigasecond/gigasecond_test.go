@@ -7,10 +7,10 @@ import (
 
 const dateFormat = "2006-01-02T15:04:05"
 
-func TestAddGigasecond(t *testing.T) {
-	for _, testCase := range addGigascecondCases {
+func TestAddGigaSecond(t *testing.T) {
+	for _, testCase := range addGigaSecondCase {
 		date, expectedDate := parse(testCase.date, testCase.expectedDate, t)
-		observed := AddGigasecond(date)
+		observed := AddGigaSecond(date)
 		if observed != expectedDate {
 			t.Fatalf("date: %s, expectedDate: %s, observed: %s", date, expectedDate, observed)
 		}
