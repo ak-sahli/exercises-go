@@ -1,0 +1,78 @@
+package hamming
+
+var distanceTestCases = []struct {
+	strand1  string
+	strand2  string
+	expected int
+}{
+	{
+		"A",
+		"A",
+		0,
+	},
+	{
+		"GGACTGA",
+		"GGACTGA",
+		0,
+	},
+	{
+		"A",
+		"G",
+		1,
+	},
+	{
+		"AG",
+		"CT",
+		2,
+	},
+	{
+		"AT",
+		"CT",
+		1,
+	},
+	{
+		"GGACG",
+		"GGTCG",
+		1,
+	},
+	{
+		"ACCAGGG",
+		"ACTATGG",
+		2,
+	},
+	{
+		"AGA",
+		"AGG",
+		1,
+	},
+	{
+		"AGG",
+		"AGA",
+		1,
+	},
+	{
+		"GATACA",
+		"GCATAA",
+		4,
+	},
+	{
+		"GGACGGATTCTG",
+		"AGGACGGATTCT",
+		9,
+	},
+	{
+		"",
+		"",
+		0,
+	},
+	{
+		"AATG",
+		"AAA",
+		-1,
+	},
+	{
+		"ATA",
+		"AGTG",
+		-1,
+	},
+}
