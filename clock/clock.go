@@ -9,21 +9,21 @@ const (
 	minutesPerDay  = 60 * hoursPerDay
 )
 
-type Clock struct {
+type Time struct {
 	hours, minutes int
 }
 
-func NewClock(hours, minutes int) Clock {
+func NewClock(hours, minutes int) Time {
 	normalizedHours, normalizedMinutes := normalize(hours, minutes)
-	return Clock{normalizedHours, normalizedMinutes}
+	return Time{normalizedHours, normalizedMinutes}
 }
 
-func (clock Clock) AddMinutes(minutesToAdd int) Clock {
-	return NewClock(clock.hours, clock.minutes+minutesToAdd)
+func (time Time) AddMinutes(minutesToAdd int) Time {
+	return NewClock(time.hours, time.minutes+minutesToAdd)
 }
 
-func (clock Clock) String() string {
-	return fmt.Sprintf(format, clock.hours, clock.minutes)
+func (time Time) String() string {
+	return fmt.Sprintf(format, time.hours, time.minutes)
 }
 
 func toMinutes(hours, minutes int) int {
