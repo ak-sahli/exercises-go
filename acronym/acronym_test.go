@@ -2,7 +2,7 @@ package acronym
 
 import "testing"
 
-func TestAbbreviate(t testing.T) {
+func TestAbbreviate(t *testing.T) {
 	for _, testCase := range abbreviateTestCases {
 		observed := Abbreviate(testCase.phrase)
 		expected := testCase.expected
