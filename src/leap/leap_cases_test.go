@@ -1,8 +1,8 @@
 package leap
 
 var testCases = []struct {
-	year        int
-	expected    bool
+	year int
+	expected bool
 }{
 	{2015, false},
 	{2016, true},
